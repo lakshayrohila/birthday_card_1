@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: antiquewhite;
+    font-family: "Edu QLD Hand", cursive;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background: #020024;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rainbow-bknd-color-change 1.2s linear infinite alternate;
+}
+
+#tag {
+    position: fixed;
+    transform: rotate(-35deg);
+    top: 18vh;
+    left: 12.5vw;
+    font-size: 1rem;
+    color: antiquewhite;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.main-container {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(10, 10, 97) 100%);
+    border-radius: 10px;
+    width: 75vw;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("background.jpg") center / cover no-repeat;
+    background-position: 50% 20%;
+    border-radius: 10px;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.main-container > * {
+    position: relative;
+    z-index: 1;
+}
+
+.main-pic {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid antiquewhite;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.text h1 {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #faebd7a1;
+    text-decoration: underline;
+
+    font-family: "Bitcount Ink", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: bold;
+    font-size: 2.5rem;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0,
+        "SZP1" 0,
+        "SZP2" 0,
+        "XPN1" 0,
+        "XPN2" 0,
+        "YPN1" 0,
+        "YPN2" 0;
+    /* animation: rainbow-bknd-color-change 1.2s linear infinite alternate; */
+}
+
+.text p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    margin-top: 10px;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: antiquewhite;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ff0000a1, #ff8b00a1, #e8ff00a1, #5dff00a1, #00b9ffa1, #5d00ffa1, #e800ffa1);
+}
+
+@keyframes rainbow-bknd-color-change {
+    0%, 100% { background-color: #ff0000 }
+    14%      { background-color: #ff8b00 }
+    28%      { background-color: #e8ff00 }
+    42%      { background-color: #5dff00 }
+    56%      { background-color: #00b9ff }
+    70%      { background-color: #5d00ff }
+    84%      { background-color: #e800ff }
+}
